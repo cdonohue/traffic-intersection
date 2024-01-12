@@ -1,6 +1,6 @@
 # Traffic Intersection
 
-![CleanShot 2024-01-12 at 14 30 06@2x](https://github.com/cdonohue/traffic-intersection/assets/1928846/fd1d6aee-18c3-4d7b-b1b9-3f228a1716ce)
+![IMG_7790](https://github.com/cdonohue/traffic-intersection/assets/1928846/2291cb7b-0554-4703-bf9f-41609f5d56af)
 
 ## Description
 
