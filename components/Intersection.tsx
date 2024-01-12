@@ -162,14 +162,14 @@ function SimulateTraffic({ direction }: { direction: string }) {
         <div className="flex w-full h-full py-8">
           <div className="flex-1 border-r border-dotted border-zinc-500"></div>
           <div className="flex-1 flex flex-col items-center justify-center">
-            <ArrowLongUpIcon className="w-24 h-24 animate-north" />
+            <ArrowLongUpIcon className="w-24 h-24 animate-pulse" />
           </div>
         </div>
       ) : null}
       {direction === 'south' ? (
         <div className="flex w-full h-full py-8">
           <div className="flex-1 flex flex-col items-center justify-center border-r border-dotted border-zinc-500">
-            <ArrowLongDownIcon className="w-24 h-24 animate-south" />
+            <ArrowLongDownIcon className="w-24 h-24 animate-pulse" />
           </div>
           <div className="flex-1"></div>
         </div>
@@ -177,10 +177,10 @@ function SimulateTraffic({ direction }: { direction: string }) {
       {direction === 'northSouth' ? (
         <div className="flex w-full h-full py-8">
           <div className="flex-1 flex flex-col items-center justify-center border-r border-dotted border-zinc-500">
-            <ArrowLongDownIcon className="w-24 h-24 animate-south" />
+            <ArrowLongDownIcon className="w-24 h-24 animate-pulse" />
           </div>
           <div className="flex-1 flex flex-col items-center justify-center">
-            <ArrowLongUpIcon className="w-24 h-24 animate-north" />
+            <ArrowLongUpIcon className="w-24 h-24 animate-pulse" />
           </div>
         </div>
       ) : null}
@@ -188,14 +188,14 @@ function SimulateTraffic({ direction }: { direction: string }) {
         <div className="flex w-full h-full flex-col px-8">
           <div className="flex-1 border-b border-dotted border-zinc-500"></div>
           <div className="flex-1 flex flex-col items-center justify-center">
-            <ArrowLongRightIcon className="w-24 h-24 animate-east" />
+            <ArrowLongRightIcon className="w-24 h-24 animate-pulse" />
           </div>
         </div>
       ) : null}
       {direction === 'west' ? (
         <div className="flex w-full h-full flex-col px-8">
           <div className="flex-1 flex flex-col items-center justify-center border-b border-dotted border-zinc-500">
-            <ArrowLongLeftIcon className="w-24 h-24 animate-west" />
+            <ArrowLongLeftIcon className="w-24 h-24 animate-pulse" />
           </div>
           <div className="flex-1"></div>
         </div>
@@ -203,10 +203,10 @@ function SimulateTraffic({ direction }: { direction: string }) {
       {direction === 'eastWest' ? (
         <div className="flex w-full h-full flex-col px-8">
           <div className="flex-1 flex flex-col items-center justify-center border-b border-dotted border-zinc-500">
-            <ArrowLongLeftIcon className="w-24 h-24 animate-west" />
+            <ArrowLongLeftIcon className="w-24 h-24 animate-pulse" />
           </div>
           <div className="flex-1 flex flex-col items-center justify-center">
-            <ArrowLongRightIcon className="w-24 h-24 animate-east" />
+            <ArrowLongRightIcon className="w-24 h-24 animate-pulse" />
           </div>
         </div>
       ) : null}
