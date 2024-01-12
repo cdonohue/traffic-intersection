@@ -1,8 +1,6 @@
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  ArrowUpIcon,
-} from '@heroicons/react/16/solid'
+import { ArrowLeftIcon } from '@heroicons/react/16/solid'
+import Street from './Street'
+import Lane from './Lane'
 
 type Props = {
   straightState: 'stop' | 'caution' | 'go'
@@ -78,36 +76,6 @@ function ArrowLight({ state }: ArrowLightProps) {
           state === 'yield' ? 'animation-blink' : ''
         }`}
       />
-    </div>
-  )
-}
-
-function Street({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex divide-x-2 divide-zinc-100 divide-dashed">
-      {children}
-    </div>
-  )
-}
-
-function Lane({
-  direction = 'straight',
-}: {
-  direction: 'left' | 'straight' | 'right'
-}) {
-  return (
-    <div className="p-4 grid grid-rows-4 w-16">
-      <div className="flex items-center justify-center">
-        {direction === 'left' ? (
-          <ArrowLeftIcon className="w-6 h-6 text-zinc-200" />
-        ) : null}
-        {direction === 'straight' ? (
-          <ArrowUpIcon className="w-6 h-6 text-zinc-200" />
-        ) : null}
-        {direction === 'right' ? (
-          <ArrowRightIcon className="w-6 h-6 text-zinc-200" />
-        ) : null}
-      </div>
     </div>
   )
 }
