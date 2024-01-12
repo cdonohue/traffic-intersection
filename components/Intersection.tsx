@@ -11,34 +11,79 @@ export default function Intersection() {
     const { value } = currentState
 
     let straightState = 'stop'
+    let turnState = 'stop'
 
-    if (value === 'northSouthGreen') {
+    if (value === 'northGreenArrow') {
+      if (direction === 'north') {
+        turnState = 'go'
+        straightState = 'go'
+      }
+    } else if (value === 'northYellowArrow') {
+      if (direction === 'north') {
+        turnState = 'caution'
+        straightState = 'go'
+      }
+    } else if (value === 'northSouthGreen') {
       if (direction === 'north' || direction === 'south') {
+        straightState = 'go'
+        turnState = 'yield'
+      }
+    } else if (value === 'northYellow') {
+      if (direction === 'north') {
+        straightState = 'caution'
+        turnState = 'caution'
+      }
+      if (direction === 'south') {
+        straightState = 'go'
+        turnState = 'yield'
+      }
+    } else if (value === 'southGreenArrow') {
+      if (direction === 'south') {
+        turnState = 'go'
+        straightState = 'go'
+      }
+    } else if (value === 'southYellowArrow') {
+      if (direction === 'south') {
+        turnState = 'caution'
+        straightState = 'caution'
+      }
+    } else if (value === 'eastGreenArrow') {
+      if (direction === 'east') {
+        turnState = 'go'
+        straightState = 'go'
+      }
+    } else if (value === 'eastYellowArrow') {
+      if (direction === 'east') {
+        turnState = 'caution'
         straightState = 'go'
       }
     } else if (value === 'eastWestGreen') {
       if (direction === 'east' || direction === 'west') {
         straightState = 'go'
+        turnState = 'yield'
       }
-    } else if (value === 'northSouthYellow') {
-      if (direction === 'north' || direction === 'south') {
+    } else if (value === 'eastYellow') {
+      if (direction === 'east') {
         straightState = 'caution'
+        turnState = 'caution'
       }
-    } else if (value === 'eastWestYellow') {
-      if (direction === 'east' || direction === 'west') {
+      if (direction === 'west') {
+        straightState = 'go'
+        turnState = 'yield'
+      }
+    } else if (value === 'westGreenArrow') {
+      if (direction === 'west') {
+        turnState = 'go'
+        straightState = 'go'
+      }
+    } else if (value === 'westYellowArrow') {
+      if (direction === 'west') {
+        turnState = 'caution'
         straightState = 'caution'
-      }
-    } else if (value === 'northSouthRed') {
-      if (direction === 'north' || direction === 'south') {
-        straightState = 'stop'
-      }
-    } else if (value === 'eastWestRed') {
-      if (direction === 'east' || direction === 'west') {
-        straightState = 'stop'
       }
     }
 
-    return { straightState }
+    return { straightState, turnState }
   }
 
   return (
