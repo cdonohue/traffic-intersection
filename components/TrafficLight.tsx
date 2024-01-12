@@ -1,4 +1,8 @@
-import { ArrowLeftIcon } from '@heroicons/react/16/solid'
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
+} from '@heroicons/react/16/solid'
 
 type Props = {
   straightState: 'stop' | 'caution' | 'go'
@@ -10,11 +14,21 @@ export default function TrafficLight({
   turnState = 'stop',
 }: Props) {
   return (
-    <div className="bg-zinc-900 p-3 rounded-lg flex gap-2">
-      <ArrowLight state={turnState} />
-      <SolidLight color="red" isOn={straightState === 'stop'} />
-      <SolidLight color="yellow" isOn={straightState === 'caution'} />
-      <SolidLight color="green" isOn={straightState === 'go'} />
+    <div className="flex flex-col items-center bg-zinc-300">
+      <div className="p-12">
+        <div className="bg-zinc-900 p-3 rounded-lg inline-flex gap-2">
+          <ArrowLight state={turnState} />
+          <SolidLight color="red" isOn={straightState === 'stop'} />
+          <SolidLight color="yellow" isOn={straightState === 'caution'} />
+          <SolidLight color="green" isOn={straightState === 'go'} />
+        </div>
+      </div>
+      <Street>
+        <Lane direction="left" />
+        <Lane direction="straight" />
+        <Lane direction="straight" />
+        <Lane direction="right" />
+      </Street>
     </div>
   )
 }
@@ -64,6 +78,36 @@ function ArrowLight({ state }: ArrowLightProps) {
           state === 'yield' ? 'animation-blink' : ''
         }`}
       />
+    </div>
+  )
+}
+
+function Street({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex divide-x-2 divide-zinc-100 divide-dashed">
+      {children}
+    </div>
+  )
+}
+
+function Lane({
+  direction = 'straight',
+}: {
+  direction: 'left' | 'straight' | 'right'
+}) {
+  return (
+    <div className="p-4 grid grid-rows-4 w-16">
+      <div className="flex items-center justify-center">
+        {direction === 'left' ? (
+          <ArrowLeftIcon className="w-6 h-6 text-zinc-200" />
+        ) : null}
+        {direction === 'straight' ? (
+          <ArrowUpIcon className="w-6 h-6 text-zinc-200" />
+        ) : null}
+        {direction === 'right' ? (
+          <ArrowRightIcon className="w-6 h-6 text-zinc-200" />
+        ) : null}
+      </div>
     </div>
   )
 }
