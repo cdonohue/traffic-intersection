@@ -19,6 +19,19 @@ The intersection is a four-way intersection. Each part of the intersection has f
 - Traffic flow is modeled by a pulsing directional arrow. This currently is only implemented for the straight traffic lanes.
 - Left turn signals respect the opposite signal and provide both a dedicated left turn signal and a flashing orange light.
 
+## Organization
+
+### Components
+
+- `SolidLight` - A solid light that can be red, yellow, green, or off.
+- `ArrowLight` - A directional arrow that can be red, yellow, green, or flashing orange.
+- `TrafficLight` - A traffic light that contains 4 lights: one independent left turn light ans three solid lights representing red, yellow, and green. This component also renders the 4 lanes of traffic.
+- `Intersection` - The main component that renders the intersection, all of its lights, and the simulation of flowing traffic.
+
+### State Machine
+
+`Intersection` uses a state machine to manage the state of the intersection. The state machine is defined in `intersectionMachine.ts`.
+
 ## Coming soon
 
 - [ ] Add sensors to detect cars waiting at the intersection. This would override the default timers and then fall back into the default timer once the sensor is no longer triggered.
