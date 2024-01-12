@@ -13,6 +13,8 @@ The intersection is a four-way intersection. Each part of the intersection has f
 - A light can either be red, yellow, or green.
   The left-hand turn lane has its own dedicated light. That light can either be red, yellow, green, or flashing orange (go if no cars are coming the other way).
 
+## Features
+
 - All lights change based on a timer. Green lights stay active for 5 seconds and yellow lights stay active for 2 seconds.
 - Traffic flow is modeled by a pulsing directional arrow. This currently is only implemented for the straight traffic lanes.
 - Left turn signals respect the opposite signal and provide both a dedicated left turn signal and a flashing orange light.
