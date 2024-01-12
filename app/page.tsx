@@ -1,3 +1,4 @@
+import Intersection from '@/components/Intersection'
 import TrafficLight from '@/components/TrafficLight'
 
 export default function Home() {
