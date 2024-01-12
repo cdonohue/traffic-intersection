@@ -3,8 +3,8 @@ import Street from './Street'
 import Lane from './Lane'
 
 type Props = {
-  straightState: 'stop' | 'caution' | 'go'
-  turnState: 'stop' | 'caution' | 'go' | 'yield'
+  straightState?: 'stop' | 'caution' | 'go'
+  turnState?: 'stop' | 'caution' | 'go' | 'yield'
 }
 
 export default function TrafficLight({
@@ -12,7 +12,7 @@ export default function TrafficLight({
   turnState = 'stop',
 }: Props) {
   return (
-    <div className="flex flex-col items-center bg-zinc-300">
+    <div className="flex flex-col items-center">
       <div className="p-12">
         <div className="bg-zinc-900 p-3 rounded-lg inline-flex gap-2">
           <ArrowLight state={turnState} />
