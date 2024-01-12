@@ -3,8 +3,8 @@ import Street from './Street'
 import Lane from './Lane'
 
 type Props = {
-  straightState?: 'stop' | 'caution' | 'go'
-  turnState?: 'stop' | 'caution' | 'go' | 'yield'
+  straightState?: string
+  turnState?: string
 }
 
 export default function TrafficLight({
@@ -54,7 +54,7 @@ function SolidLight({ color, isOn = false }: SolidLightProps) {
 }
 
 type ArrowLightProps = {
-  state: 'stop' | 'caution' | 'go' | 'yield'
+  state: string
 }
 
 function ArrowLight({ state }: ArrowLightProps) {
