@@ -1,5 +1,7 @@
 # Traffic Intersection
 
+![CleanShot 2024-01-12 at 14 30 06@2x](https://github.com/cdonohue/traffic-intersection/assets/1928846/fd1d6aee-18c3-4d7b-b1b9-3f228a1716ce)
+
 ## Description
 
 This project simulates a 4-way traffic intersection.
@@ -21,6 +23,8 @@ The intersection is a four-way intersection. Each part of the intersection has f
 - [ ] Add crosswalks and pedestrian signals.
 
 ## Demo
+
+
 
 ## Tech Stack
 
