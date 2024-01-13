@@ -25,7 +25,7 @@ The intersection is a four-way intersection. Each part of the intersection has f
 
 - `SolidLight` - A solid light that can be red, yellow, green, or off.
 - `ArrowLight` - A directional arrow that can be red, yellow, green, or flashing orange.
-- `TrafficLight` - A traffic light that contains 4 lights: one independent left turn light ans three solid lights representing red, yellow, and green. This component also renders the 4 lanes of traffic.
+- `TrafficLight` - A traffic light that contains 4 lights: one independent left turn light and three solid lights representing red, yellow, and green. This component also renders the 4 lanes of traffic.
 - `Intersection` - The main component that renders the intersection, all of its lights, and the simulation of flowing traffic.
 
 ### State Machine
