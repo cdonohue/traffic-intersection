@@ -32,6 +32,16 @@ The intersection is a four-way intersection. Each part of the intersection has f
 
 `Intersection` uses a state machine to manage the state of the intersection. The state machine is defined in `intersectionMachine.ts`.
 
+- All lights start off red
+- Northbound traffic gets a green light, including the left turn lane
+- After 5 seconds, the northbound light turns yellow
+- After 2 seconds, north and southbound lights turn green and turn signals flash orange
+- After 5 seconds, northbound turns yellow
+- After 2 seconds, northbound is red. Southbound stays green and has a protected left turn signal
+- After 5 seconds, southbound turns yellow
+- After 2 seconds, southbound turns red
+- Repeat the above steps for east and westbound traffic (starting with eastbound)
+
 ## Coming soon
 
 - [ ] Add sensors to detect cars waiting at the intersection. This would override the default timers and then fall back into the default timer once the sensor is no longer triggered.
