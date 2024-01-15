@@ -67,10 +67,23 @@ function ArrowLight({ state }: ArrowLightProps) {
       ? 'text-red-500'
       : state === 'yield'
       ? 'text-orange-500'
-      : 'text-zinc'
+      : 'text-zinc-600'
+
+  const ringColor =
+    state === 'go'
+      ? 'ring-green-500'
+      : state === 'caution'
+      ? 'ring-yellow-500'
+      : state === 'stop'
+      ? 'ring-red-500'
+      : state === 'yield'
+      ? 'ring-orange-500'
+      : 'ring-zinc-600'
 
   return (
-    <div className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-800">
+    <div
+      className={`w-8 h-8 rounded-full flex items-center justify-center bg-zinc-800 ring-2 ring-inset ${ringColor}`}
+    >
       <ArrowLeftIcon
         className={`w-6 h-6 ${color} ${
           state === 'yield' ? 'animation-blink' : ''
