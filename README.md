@@ -34,7 +34,7 @@ The intersection is a four-way intersection. Each part of the intersection has f
 
 - All lights start off red
 - Northbound traffic gets a green light, including the left turn lane
-- After 5 seconds, the northbound light turns yellow
+- After 5 seconds, the northbound turn light turns yellow
 - After 2 seconds, north and southbound lights turn green and turn signals flash orange
 - After 5 seconds, northbound turns yellow
 - After 2 seconds, northbound is red. Southbound stays green and has a protected left turn signal
